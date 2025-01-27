@@ -50,12 +50,9 @@ class SolarPosition
     SolarPosition_t getSolarPosition();
     SolarPosition_t getSolarPosition(time_t t);
 
-    inline void setLatitude(float lat) {
-      Latitude = lat * DEG_TO_RAD;
-    }
-    
-    inline void setLongitude(float long) {
-      Longitude = long * DEG_TO_RAD;
+    inline void setLatitudeLongitude(float Lat, float Lon) {
+      Latitude = Lat * DEG_TO_RAD;
+      Longitude = Lon * DEG_TO_RAD;
     }
 
     float getSolarElevation();
