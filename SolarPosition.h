@@ -42,12 +42,21 @@ class SolarPosition
 
   public:
 
+    SolarPosition();
     SolarPosition(float Latitude, float Longitude);
 
     static void setTimeProvider(getExternalTime getTimeFunction);
 
     SolarPosition_t getSolarPosition();
     SolarPosition_t getSolarPosition(time_t t);
+
+    inline void setLatitude(float lat) {
+      Latitude = lat * DEG_TO_RAD;
+    }
+    
+    inline void setLongitude(float long) {
+      Longitude = long * DEG_TO_RAD;
+    }
 
     float getSolarElevation();
     float getSolarElevation(time_t t);

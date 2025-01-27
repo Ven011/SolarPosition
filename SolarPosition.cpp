@@ -12,6 +12,13 @@ getExternalTime SolarPosition::getExtTimePtr = NULL; // pointer to external sync
 
 // constructor
 //
+SolarPosition::SolarPosition() {
+	Latitude = 0;
+	Longitude = 0;
+}
+
+// constructor
+//
 SolarPosition::SolarPosition(const float Lat, const float Lon) {
 	Latitude = Lat * DEG_TO_RAD;
 	Longitude = Lon * DEG_TO_RAD;
